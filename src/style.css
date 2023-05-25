@@ -1,0 +1,121 @@
+i {
+z-index: 333;
+cursor: pointer;
+}
+
+.container {
+padding-left: 15px;
+padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+}
+.landing::after {
+content: "";
+width: 100%;
+height: 100%;
+background-color: rgb(0,0,0,60%);
+position: absolute;
+z-index:0;
+}
+.landing .content > button::after {
+content: "";
+width: 0px;
+height: 100%;
+top: 0;
+left: 0;
+position: absolute;
+background-color: rgb(255,255,255,40%);
+transition: .3s;
+}
+.landing .content > button:hover::after {
+width: 100%;
+}
+.content .hov::after {
+content: "";
+width: 0;
+height: 5%;
+position: absolute;
+bottom: 0;
+left: 0;
+transition: .3s;
+background-color: rgb(255, 0, 0,70%);
+}
+.content .hov:hover::after {
+width: 100%;
+}
+
+.box-photo .box::before{
+content: "";
+border: 2px solid red ;
+width: 0px;
+height: 0px;
+position: absolute;
+left: 50%;
+top: 50%;
+background-color: rgb(0,0,0,40%);
+transition: .3s;
+opacity: 0;
+z-index: 1;
+}
+.box-photo .box:hover:before {
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+opacity: 1;
+}
+
+.box-photo .box:hover .content {
+opacity: 1;
+color: white;
+font-size: 22px;
+white-space:nowrap
+}
+
+.two::after,
+.two-2::after,
+.two-3::after,
+.two-4::after,
+.two-5::after{
+content: "";
+width: 1px;
+height: 15px;
+position: absolute;
+background-color: black;
+right: 0px;
+top: -7px;
+}
+
+.two::before,
+.two-2::before,
+.two-3::before,
+.two-4::before,
+.two-5::before {
+content: "93%";
+right: -15px;
+top: -30px;
+position: absolute;
+}
+
+input {
+border-color: white;
+}
+
+.two-2::before {
+content: "90%";
+}
+.two-3::before {
+content: "75%";
+}
+.two-4::before {
+content: "53%";
+}
+.two-5::before {
+content: "84%";
+}
+
+@media (max-width:992px) {
+    .info .container {
+        display: none;
+    }
+}
